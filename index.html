@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câmera de Ação 4K Ultra HD - Capture Suas Aventuras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(238, 90, 36, 0.3);
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .image-gallery img {
+            transition: all 0.3s ease;
+        }
+        
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        .countdown {
+            background: linear-gradient(45deg, #ff4757, #ff3838);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-video text-2xl text-blue-600"></i>
+                    <span class="text-xl font-bold text-gray-800">ActionCam Pro</span>
+                </div>
+                <a href="https://s.shopee.com.br/gFapwgeOZ" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-6 py-2 rounded-full font-semibold">
+                    Comprar Agora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white pt-20 pb-16 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="slide-in">
+                    <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Capture Suas <span class="text-yellow-400">Aventuras</span> em 4K
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Câmera de Ação 4K Ultra HD com Wi-Fi, impermeável até 30 metros e controle remoto incluso. Perfeita para esportes radicais e momentos únicos.
+                    </p>
+                    
+                    <!-- Price -->
+                    <div class="mb-8">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-3xl font-bold text-yellow-400">R$ 80,00</span>
+                            <span class="text-lg line-through text-blue-200">R$ 159,90</span>
+                            <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">50% OFF</span>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://s.shopee.com.br/gFapwgeOZ" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg text-center pulse-animation">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Comprar Agora
+                        </a>
+                        <button onclick="scrollToVideo()" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all">
+                            <i class="fas fa-play mr-2"></i>
+                            Ver Demonstração
+                        </button>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="flex items-center space-x-6 mt-8 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-shipping-fast text-yellow-400 mr-2"></i>
+                            <span>Frete Grátis</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-yellow-400 mr-2"></i>
+                            <span>Garantia 1 Ano</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-2"></i>
+                            <span>4.8/5 Avaliações</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="floating">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8tvvt5epxg1da.webp" 
+                         alt="Câmera de Ação 4K" 
+                         class="w-full max-w-lg mx-auto rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="countdown text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center space-x-4">
+                <i class="fas fa-clock text-2xl"></i>
+                <span class="text-lg font-semibold">Oferta por tempo limitado:</span>
+                <div id="countdown" class="flex space-x-2 font-bold text-xl">
+                    <span id="hours">23</span>:<span id="minutes">59</span>:<span id="seconds">59</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Recursos Incríveis</h2>
+                <p class="text-xl text-gray-600">Tecnologia de ponta para capturar cada momento</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl text-center">
+                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-video text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">4K Ultra HD</h3>
+                    <p class="text-gray-600">Qualidade cinematográfica com resolução 4K para imagens nítidas</p>
+                </div>
+                
+                <div class="feature-card bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl text-center">
+                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wifi text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Wi-Fi Integrado</h3>
+                    <p class="text-gray-600">Conecte-se facilmente e compartilhe suas aventuras instantaneamente</p>
+                </div>
+                
+                <div class="feature-card bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl text-center">
+                    <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-water text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Impermeável 30m</h3>
+                    <p class="text-gray-600">Mergulhe fundo sem preocupações, resistente até 30 metros</p>
+                </div>
+                
+                <div class="feature-card bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl text-center">
+                    <div class="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Controle Remoto</h3>
+                    <p class="text-gray-600">Controle total à distância para capturas perfeitas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video-section" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Veja em Ação</h2>
+                <p class="text-xl text-gray-300">Descubra o que esta câmera pode fazer por você</p>
+            </div>
+            
+            <div class="max-w-md mx-auto">
+                <div class="relative bg-black rounded-2xl overflow-hidden shadow-2xl" style="aspect-ratio: 9/16;">
+                    <iframe 
+                        src="https://www.youtube.com/embed/BP3vwzZcC_c?si=YXfF-mYpDBfpApa3&autoplay=0&mute=0&controls=1&showinfo=1&rel=0" 
+                        class="w-full h-full"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="https://s.shopee.com.br/gFapwgeOZ" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg">
+                    Quero a Minha Agora!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Galeria de Imagens</h2>
+                <p class="text-xl text-gray-600">Veja todos os detalhes da sua nova câmera</p>
+            </div>
+            
+            <div class="image-gallery grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8wrv9op6hix3c.webp" 
+                     alt="Câmera de Ação - Vista 1" 
+                     class="w-full h-64 object-cover rounded-xl shadow-lg">
+                
+                <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8wrv9op7w3df9.webp" 
+                     alt="Câmera de Ação - Vista 2" 
+                     class="w-full h-64 object-cover rounded-xl shadow-lg">
+                
+                <img src="https://down-br.img.susercontent.com/file/sg-11134201-7reqo-m20s471tm1h39c.webp" 
+                     alt="Câmera de Ação - Vista 3" 
+                     class="w-full h-64 object-cover rounded-xl shadow-lg">
+                
+                <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8tvvt5erc0h89.webp" 
+                     alt="Câmera de Ação - Vista 4" 
+                     class="w-full h-64 object-cover rounded-xl shadow-lg">
+                
+                <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8tvvt5esqkx0b.webp" 
+                     alt="Câmera de Ação - Vista 5" 
+                     class="w-full h-64 object-cover rounded-xl shadow-lg">
+                
+                <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8tvvt5evjpt22.webp" 
+                     alt="Câmera de Ação - Vista 6" 
+                     class="w-full h-64 object-cover rounded-xl shadow-lg">
+                
+                <img src="https://down-br.img.susercontent.com/file/sg-11134201-7reo3-m20s496ohk73fc.webp" 
+                     alt="Câmera de Ação - Vista 7" 
+                     class="w-full h-64 object-cover rounded-xl shadow-lg">
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">O Que Nossos Clientes Dizem</h2>
+                <p class="text-xl text-gray-600">Mais de 10.000 aventureiros satisfeitos</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Incrível qualidade de imagem! Usei em uma trilha e as fotos ficaram perfeitas. Recomendo muito!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            M
+                        </div>
+                        <div>
+                            <p class="font-semibold">Marina Silva</p>
+                            <p class="text-sm text-gray-500">Aventureira</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Levei para o mergulho e funcionou perfeitamente. A qualidade 4K é impressionante!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            R
+                        </div>
+                        <div>
+                            <p class="font-semibold">Roberto Costa</p>
+                            <p class="text-sm text-gray-500">Mergulhador</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Excelente custo-benefício! A câmera é resistente e a qualidade das imagens surpreende."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            A
+                        </div>
+                        <div>
+                            <p class="font-semibold">Ana Oliveira</p>
+                            <p class="text-sm text-gray-500">Fotógrafa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Perguntas Frequentes</h2>
+                <p class="text-xl text-gray-600">Tire suas dúvidas sobre a câmera</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-gray-50 rounded-xl overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-gray-800 hover:bg-gray-100 transition-colors" onclick="toggleFaq(1)">
+                        <div class="flex justify-between items-center">
+                            <span>A câmera realmente é impermeável até 30 metros?</span>
+                            <i class="fas fa-chevron-down transform transition-transform" id="icon-1"></i>
+                        </div>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600" id="faq-1">
+                        Sim! A câmera vem com case impermeável que garante proteção total até 30 metros de profundidade, perfeita para mergulho e esportes aquáticos.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-gray-800 hover:bg-gray-100 transition-colors" onclick="toggleFaq(2)">
+                        <div class="flex justify-between items-center">
+                            <span>Como funciona o controle remoto?</span>
+                            <i class="fas fa-chevron-down transform transition-transform" id="icon-2"></i>
+                        </div>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600" id="faq-2">
+                        O controle remoto funciona via Wi-Fi e permite iniciar/parar gravações, tirar fotos e alterar configurações à distância de até 10 metros.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-gray-800 hover:bg-gray-100 transition-colors" onclick="toggleFaq(3)">
+                        <div class="flex justify-between items-center">
+                            <span>Qual a duração da bateria?</span>
+                            <i class="fas fa-chevron-down transform transition-transform" id="icon-3"></i>
+                        </div>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600" id="faq-3">
+                        A bateria dura aproximadamente 90 minutos gravando em 4K e até 2 horas em Full HD. Inclui bateria extra e carregador.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl overflow-hidden">
+                    <button class="w-full text-left p-6 font-semibold text-gray-800 hover:bg-gray-100 transition-colors" onclick="toggleFaq(4)">
+                        <div class="flex justify-between items-center">
+                            <span>Tem garantia?</span>
+                            <i class="fas fa-chevron-down transform transition-transform" id="icon-4"></i>
+                        </div>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600" id="faq-4">
+                        Sim! Oferecemos garantia de 1 MêS contra defeitos de fabricação e suporte técnico completo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Não Perca Esta Oportunidade!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Apenas R$ 80,00 por tempo limitado. Capture suas aventuras com qualidade profissional.
+            </p>
+            
+            <div class="mb-8">
+                <div class="flex justify-center items-center space-x-4 mb-4">
+                    <span class="text-4xl font-bold text-yellow-400">R$ 80,00</span>
+                    <span class="text-xl line-through text-blue-200">R$ 159,90</span>
+                </div>
+                
+            </div>
+            
+            <a href="https://s.shopee.com.br/gFapwgeOZ" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-12 py-6 rounded-full font-bold text-xl pulse-animation inline-block">
+                <i class="fas fa-shopping-cart mr-3"></i>
+                COMPRAR AGORA - 50% OFF
+            </a>
+            
+            <p class="text-sm mt-4 text-blue-200">
+                <i class="fas fa-lock mr-1"></i>
+                Compra 100% segura e protegida
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-video text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">ActionCam Pro</span>
+                    </div>
+                    <p class="text-gray-400">Capture suas aventuras com qualidade profissional.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4"></h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4"></h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contato</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-envelope mr-2"></i>aprovados.com.br2021@gmail.com</p>
+                        <p><i class="fas fa-phone mr-2"></i>(11) 91607-2188</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 ActionCam Pro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            const distance = tomorrow.getTime() - now;
+            
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Smooth scroll to video
+        function scrollToVideo() {
+            document.getElementById('video-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        // FAQ Toggle
+        function toggleFaq(id) {
+            const faq = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (faq.classList.contains('hidden')) {
+                faq.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                faq.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.feature-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9694001d5489680e',t:'MTc1NDIwNTA4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
